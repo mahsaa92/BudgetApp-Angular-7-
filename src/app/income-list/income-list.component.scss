@@ -1,0 +1,61 @@
+@import "../../variables.scss";
+
+.incomeList-contain {
+    padding: 0px 50px ;
+    float: left;
+    width:44%;
+    @include breakpoint(xs) {
+      padding: 0 0;
+      float: none;
+      width: 100%;
+    }
+    .date{
+      position: relative;
+      left: -22%;
+      display: none;
+    }
+
+    .close {
+      display: none;
+      position: relative;
+      left: 35%;
+      top: 10px;
+      margin: 0 auto;
+      width: 32px;
+      height: 32px;
+      
+    }
+    .close:hover {
+      opacity: 1;
+    }
+    .close:before, .close:after {
+      position: absolute;
+      left: 15px;
+      content: ' ';
+      height: 20px;
+      width: 2px;
+      background-color: red;
+    }
+    .close:before {
+      transform: rotate(45deg);
+    }
+    .close:after {
+      transform: rotate(-45deg);
+    }
+    
+    .visible-delete-date:hover a, .date-hover:hover span{
+      display: block;
+      
+  
+    }
+
+    p{
+      position: absolute;
+      left: 90%;
+      margin: 0 auto;
+      display: inline-block;
+      color: lightseagreen;
+    }
+  
+    
+  }

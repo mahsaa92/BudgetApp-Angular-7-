@@ -1,0 +1,16 @@
+<div class="incomeList-contain">
+  <mat-list (ngAfterViewInit)="ngAfterViewInit()">
+    <mat-list-item>
+      <h2 style="color: darkcyan;">Income</h2>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item *ngFor="let inc of incomes; let i = index;" class="visible-delete-date date-hover" >
+      {{inc.description}}
+      <mat-divider></mat-divider>
+      
+      <a href="#" class="close"  (click)= "deleteIncome(i)" ></a> 
+      <span class="date">{{inc.date | date}}</span>
+      <p>{{inc.value}}</p>
+    </mat-list-item>
+  </mat-list>
+</div>

@@ -1,0 +1,189 @@
+@import "../../variables.scss";
+
+
+@media only screen and (max-width: 600px) {
+  .list-section{
+    position: relative;
+    height:130px !important;
+  }
+  .input-value-description {
+    position: absolute;
+    left: 10px;
+    
+    input{
+      width: 22%;
+    }
+
+  }
+
+  .toggle-btn{
+    position: absolute;
+    left: 20%;
+  }
+
+  #date{
+    position: relative;
+    left: 46% !important;
+    width: 120px;
+    top: 10px !important;
+  }
+  .submit-btn{
+    position: relative;
+    left: -26% !important;
+    margin-top: 6%;
+  }
+  
+}
+
+
+
+
+.list-section{
+   margin-top: 20px;
+   border-bottom: solid 1px gray;
+   margin-bottom: 1%;
+   padding-bottom: 1%;
+   height: 90px;
+   
+  
+
+.toggle-btn{
+
+.tg-list {
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.tg-list-item {
+	margin: 0 2em;
+}
+
+
+.tgl {
+	display: none;
+  
+	// add default box-sizing for this scope
+	&,
+  &:after,
+  &:before,
+	& *,
+  & *:after,
+  & *:before,
+	& + .tgl-btn {
+		box-sizing: border-box;
+		&::selection {
+			background: none;
+		}
+	}
+  
+	+ .tgl-btn {
+		outline: 0;
+		display: block;
+		width: 4em;
+		height: 2em;
+		position: relative;
+		cursor: pointer;
+    user-select: none;
+		&:after,
+    &:before {
+			position: relative;
+			display: block;
+			content: "";
+			width: 50%;
+			height: 100%;
+		}
+    
+		&:after {
+			left: 0;
+		}
+    
+		&:before {
+			display: none;
+		}
+	}
+  
+	&:checked + .tgl-btn:after {
+		left: 50%;
+	}
+}
+
+// themes
+
+
+.tgl-flat {
+	+ .tgl-btn {
+    position: absolute;
+    left:40%;
+		padding: 2px;
+		transition: all .2s ease;
+		background: #fff;
+		border: 4px solid red;
+		border-radius: 2em;
+		&:after {
+			transition: all .2s ease;
+			background: red;
+			content: attr(data-tg-off);
+            border-top-left-radius: 40%;
+            border-bottom-left-radius: 40%;
+		}
+	}
+  
+	&:checked + .tgl-btn {
+    border: 4px solid #7FC6A6;
+    &:after {
+      content: attr(data-tg-on);
+      left: 50%;
+      background: #7FC6A6;
+      border-bottom-right-radius: 90%;
+      border-top-right-radius: 90%;
+      
+    }
+  }
+}
+}
+.input-value-description{
+    position: absolute;
+    left: 45%;
+  input{
+    
+    border-radius: 10px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  .dropdown{
+    position: absolute;
+    top: 50px;
+    border-radius: 5px;
+    width: 170px;
+    height: 30px;;
+  }
+}
+
+#date{
+  position: relative;
+  left: 55%;
+  width: 160px;
+  top: 30px;
+  border-radius: 8px;
+}
+.submit-btn{
+ position: relative;
+ left: 58%;
+ top: 28%;
+ height: 40px;
+ width: 40px;
+ border-radius: 50%;
+ background-color: red;
+ border: none;
+#tickmark{
+  clip-path: polygon(40% 55%, 86% 11%, 100% 27%, 41% 86%, 0 53%, 13% 35%);
+  height: 30px;
+  width: 20px;
+  margin: 0 auto;
+  background-color: white;
+}
+}
+}
+
+  

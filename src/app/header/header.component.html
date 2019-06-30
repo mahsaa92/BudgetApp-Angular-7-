@@ -1,0 +1,34 @@
+<header>
+  <form>
+    <div class="main-header">
+      <div class="total-saving">
+        <h5>Total savings <br>204400</h5>
+      </div>
+      <div class="month-saving">
+        <h5>Monthly saving<br> {{num1 - num2}} </h5>
+      </div>
+ 
+      <div class="date" >
+
+        <mat-form-field class="calender" >
+          <input matInput [matDatepicker]="picker"
+            placeholder="Choose a date"
+            (dateChange)="onDateChange($event)">
+          <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+          <mat-datepicker #picker ></mat-datepicker>
+        </mat-form-field>
+        <div class="amount-total-income-exp">
+          <div class="amount-income">
+            <h2 style="text-align: center; margin: 0;">Income</h2>
+            <h3 style="text-align: center; color: darkcyan;">+{{num1}}</h3>
+          </div>
+          <div class="amount-Exp">
+            <h2 style="text-align: center; margin: 0;">Expenses</h2>
+            <h3 style="text-align: center; color: red; ">-{{num2}}</h3>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </form>
+</header>

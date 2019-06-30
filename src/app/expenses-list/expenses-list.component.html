@@ -1,0 +1,40 @@
+
+<div class="expensesList-contain">
+  <mat-list>
+    <mat-list-item>
+      <h2 style="color: red;">Expenses</h2>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-tree   [dataSource]="dataSource"
+      [treeControl]="treeControl"
+      (ngAfterViewInit)="ngAfterViewInit()"
+     >
+      <mat-tree-node *matTreeNodeDef="let node"
+        matTreeNodePadding class="tree visible-delete-date date-hover"
+       >
+        
+        <button mat-icon-button disabled></button>
+        {{node.name}}
+     
+        <p>{{node.value}}</p>
+        <a  href="#" class="close" (click) = "deleteExpenses(node)"></a>
+        <span class="date">{{node.date | date}}</span>
+      </mat-tree-node>
+  
+
+      <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding class="tree visible-delete-date date-hover">
+        <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+          </mat-icon>
+        </button>
+        {{node.name}}
+
+        <p>{{node.value}}</p>
+        
+        <span class="date">{{node.date | date}}</span>
+      </mat-tree-node>
+    </mat-tree>
+  </mat-list>
+</div>

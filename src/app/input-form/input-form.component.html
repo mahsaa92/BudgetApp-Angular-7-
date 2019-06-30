@@ -1,0 +1,35 @@
+
+  <section class="list-section">
+      <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+    <div class="toggle-btn">
+      <input type="text" id="cb4" class="tgl tgl-flat" type="checkbox" (click)="clickMe()">
+      <label for="cb4" class="tgl-btn" data-tg-off="-" data-tg-on="+"></label>
+    </div>
+    <div class="input-value-description">
+
+      <input type="text" type="number" value="value" formControlName="name"  placeholder="value" required>
+
+      <input type="text" value="add description" formControlName="message" placeholder="description" required> <br>
+      <select class="dropdown" *ngIf="show" formControlName="category" placeholder="category" required>
+        <option >--Category--</option>
+        <option >Grocery</option>
+        <option >Drugstore</option>
+        <option >Sport</option>
+        <option >Fixed costs</option>
+        <option >Travel</option>
+      </select>
+
+    </div>
+<!-- <input id="date" type="date" class="date" name="trip-start" formControlName="date"
+       value="2019-04-22"
+       min="2018-01-01" max="2019-12-31"> -->
+       <mat-form-field id="date" type="date">
+        <input  matInput [matDatepicker] = "picker" placeholder = "Choose a date" formControlName="date" required>
+        <mat-datepicker-toggle matSuffix [for] = "picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+     </mat-form-field>
+    <button class="submit-btn">
+      <div id="tickmark"></div>
+    </button>
+    </form>
+  </section>

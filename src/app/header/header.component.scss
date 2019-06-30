@@ -1,0 +1,211 @@
+@import "../../variables.scss";
+
+header {
+
+    background-color: rosybrown;
+    width: 100%;
+    height: 260px;
+    padding-top: 30px;
+    @include breakpoint(xs) {
+      float: none;
+      width: 100%;
+    }
+
+    .main-header{
+      
+      background-color: antiquewhite;
+      box-shadow: 10px 10px 5px grey;
+      border-radius: 9px;
+      margin: auto;
+      width: 50%;
+      height: 220px;
+      @include breakpoint(xs) {
+        float: none;
+        width: 100%;
+      }
+
+      .total-saving{
+       
+        background-color:  rgba(240, 148, 198, 0.5);
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        margin: 0px;      
+        position:absolute;
+        top: 60px;
+        left: 500px;
+
+        @include breakpoint(xs) {
+     
+            background-color:  rgba(240, 148, 198, 0.5);
+            border: none;
+            position: relative;
+            margin: 0;
+            top: 50px;
+            left: 50px;
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+          
+
+        }
+        h5{
+          text-align: center;
+        }
+      }
+      @include breakpoint(md) {
+      .total-saving:before {
+          position: absolute;
+          content: '';
+          width: 100px;
+          height: 100px;
+          border: darkmagenta dotted;
+          top: -3px;
+          left: -3px;
+          border-radius: inherit;
+        }
+
+        .total-saving:before {
+          animation: spin 10s linear infinite;
+        }
+        @keyframes spin { 
+          100% { 
+            transform: rotateZ(360deg); 
+          }
+        
+        }
+      }
+        .month-saving{
+
+          background-color:  rgba(240, 148, 198, 0.5);
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          margin: 0px;      
+          position:absolute;
+          top: 60px;
+          left: 1321px;
+      
+          @include breakpoint(xs) {
+     
+            background-color:  rgba(240, 148, 198, 0.5);
+            border: none;
+            position: relative;
+            margin: 0;
+            top: -40px;
+            left: 190px;
+            height: 70px;
+            width: 70px;
+            border-radius: 10px;
+          
+
+        }
+          h5{
+            text-align: center;
+          }
+
+        }
+        @include breakpoint(md) {
+          .month-saving:before {
+            position: absolute;
+            content: '';
+            width: 100px;
+            height: 100px;
+            border: darkmagenta dotted;
+            top: -3px;
+            left: -3px;
+            border-radius: inherit;
+          }
+  
+          .month-saving:before {
+            animation: spin 10s linear infinite;
+          }
+          @keyframes spin { 
+            100% { 
+              transform: rotateZ(360deg); 
+            }
+          
+          }
+        }
+
+      .date{
+        position: relative;
+        left: 390px;
+        top: 20px;
+        width: 200px;
+        height: 100px;
+        @include breakpoint(xs) {
+          position: absolute;
+          top: 10px;
+          left: 100px;
+        }
+      
+        .calender{
+          position: absolute;
+          top: -15px;
+          margin: 0 0;
+          @include breakpoint(xs) {
+            top: 60px;
+          }
+          input{
+           
+            border-radius: 10px;
+            height: 30px;
+            width: 150px;
+            z-index: 10;
+          }
+            
+        }
+      }      
+
+      .amount-total-income-exp{
+       width: 350px;
+       position: relative;
+       left: -80px;
+       top: 65px;
+       @include breakpoint(xs) {
+        width:100%;
+        position: relative;
+        left: -35px;
+        top: 60px;
+       }
+       .amount-income{
+         height: 100px;
+         width: 150px;
+         border-radius: 10px;
+         border: #000 solid 1px;
+         float: left;
+         overflow:hidden;
+         margin-right: 10px;
+         @include breakpoint(xs) {
+         height: 1%;
+         width: 43%;
+         border-radius: 10px;
+         border: none;
+         float: left;
+         overflow:hidden;
+         margin-right: 20px;
+        }
+         
+       }
+
+       .amount-Exp{
+        height: 100px;
+        width: 150px;
+        border-radius: 10px;
+        border: #000 solid 1px;
+        float: right;
+        overflow:hidden;
+        @include breakpoint(xs) {
+          height: 1%;
+          width: 43%;
+          border-radius: 10px;
+          border: none;
+          float: right;
+          overflow:hidden;
+          
+         }
+       }
+      }
+    }    
+}
